@@ -4,10 +4,19 @@
     <title>Bootstrap 101 Template</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css">
   <style type="text/css">
   	body{
     overflow:hidden;
+}
+
+
+.slick-slide {
+  text-align: center;
+
 }
 img.responsive {
     width: 100%;
@@ -15,9 +24,16 @@ img.responsive {
 }
 #flipbook{
     width:100%;
-    height:auto;
+    height:270px;
 }
-
+.containers{
+   padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px !important;
+    background: #333333;
+    position: relative;
+}
 #flipbook .page{
     width:100%;
     height:auto;
@@ -77,10 +93,45 @@ img.responsive {
 
   </style>
   	<style>
+    body a ,h3{
+        color: #fff;
+    }
+ 
 		/* styles unrelated to zoom */
 		* { border:0; margin:0; padding:0; }
 		p { position:absolute; top:3px; right:28px; color:#555; font:bold 13px/1 sans-serif;}
-
+        .share-sosmed {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+        .share-sosmed a:nth-of-type(1):before {
+            content: '\f09a';
+        }
+       .share-sosmed a:nth-of-type(2):before {
+            content: '\f099';
+        }
+        .share-sosmed a:nth-of-type(3):before {
+            content: '\f0e1';
+        }
+      
+         .share-sosmed a {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    font-family: fontawesome;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 33px;
+    margin: 0 2px;
+        padding-top: 7px;
+    transition: all .5s;
+    -webkit-font-smoothing: antialiased;
+}
 		/* these styles are for the demo, but are not required for the plugin */
 		.zoom {
 			display:inline-block;
@@ -107,34 +158,84 @@ img.responsive {
 
 		#ex2 img:hover { cursor: url(grab.cur), default; }
 		#ex2 img:active { cursor: url(grabbed.cur), default; }
+        .next_slides,.prevslides{
+            color: #fff;
+        }
+        .next_slides {
+            position: absolute;
+            top: 71px;
+            right: 63px;
+        }
+        .prevslides{
+             position: absolute;
+            top: 71px;
+            left: 63px;
+        }
 	</style>
   <body>
- 
-		<div   id="flipbook">
-	 
-	    <div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/cover-depan.jpg" class="responsive"></span></div>
-	<div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-01.jpg" class="responsive"></span></div>
-	<div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-02.jpg" class="responsive"></span></div>
-	<div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-03.jpg" class="responsive"></span></div>
-	<div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-04.jpg" class="responsive"></span></div>
-	
-	    
-	</div>
-
+        <div class="containers">
+            <div class="next_slides">
+               <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </div>
+            <div class="prevslides">
+             <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div>
+              <div class='single-item'>
+                <div><h3>Soekarno</h3></div>
+                <div><h3>Soeharto</h3></div>
+                <div><h3>Habibi</h3></div>
+                <div><h3>Megawati</h3></div>
+                <div><h3>Susilo Bambang</h3></div>
+                <div><h3>Jokowi</h3></div>
+              </div>
+          
+    		<div   id="flipbook">
+    	 
+        	    <div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/cover-depan.jpg" class="responsive"></span></div>
+        	<div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-01.jpg" class="responsive"></span></div>
+        	<div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-02.jpg" class="responsive"></span></div>
+        	<div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-03.jpg" class="responsive"></span></div>
+        	<div > <span class='zoom'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-04.jpg" class="responsive"></span></div>
+    	      <div > <span class='zoomming'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/cover-depan.jpg" class="responsive"></span></div>
+            <div > <span class='zoomming'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-01.jpg" class="responsive"></span></div>
+            <div > <span class='zoomming'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-02.jpg" class="responsive"></span></div>
+            <div > <span class='zoomming'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-03.jpg" class="responsive"></span></div>
+            <div > <span class='zoomming'><img alt="" src="https://katadata.co.id/public/template/frontend_template_v1/sejarahekonomi/images/Hal-04.jpg" class="responsive"></span></div>
+    	    
+    	</div>
+        <div id="social_icon">
+            <div class="share-sosmed">
+        <a class="popup" href="http://www.facebook.com/sharer/sharer.php?u=http://katadata.co.id/sejarahekonomi&amp;title=Perjalanan%20Ekonomi%20Indonesia%201945-2017" id="0"><span></span></a> <a class="popup" href="http://twitter.com/intent/tweet?text=Perjalanan%20Ekonomi%20Indonesia%201945%2D2017+http://katadata.co.id/sejarahekonomi+via%20@KATADATAnews" id="0"><span></span></a> <a class="popup" href="http://www.linkedin.com/shareArticle?mini=true&amp;title=Perjalanan+Ekonomi+Indonesia+1945-2017&amp;url=http://katadata.co.id/sejarahekonomi&amp;summary=Sejarah%20ekonomi%20Indonesia%20(1945-2017)%20yang%20ditampilkan%20dalam%20bentuk%20infografik" id="0s"><span></span></a>
+    </div>
+        </div>
+    </div>
 	
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="http://www.turnjs.com/lib/turn.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-zoom/1.7.20/jquery.zoom.min.js"></script>
+    <script src="http://kenwheeler.github.io/slick/slick/slick.js"></script>
     	<script src='jquery.zoom.js'></script>
-    <script type="text/javascript">
-    	$(document).ready(function(){
-    		$("#flipbook").turn({
-    			display:"single",
-			   
-			});
-    		$('.zoom').zoom();
-		
-    	});
-    </script>
+        <script type="text/javascript">
+        	$(document).ready(function(){
+                $(".single-item").slick({
+                    dots: true,
+                     prevArrow:".next_slides",
+                     nextArrow:".prevslides"
+                });
+
+                $('.sliderWrapper').slick({
+                  infinite: true,
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                });
+        		$("#flipbook").turn({
+        			display:"single",
+    			   
+    			});
+        		$('.zoom').zoom();
+                
+    		  
+        	});
+        </script>
   </body>
 </html>
